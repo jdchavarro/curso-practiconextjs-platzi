@@ -1,36 +1,29 @@
 import React, { useState, useContext } from "react";
 
 import AppContext from "@context/AppContext";
-import MyOrder from "@containers/MyOrder";
+
 import Menu from "@components/Menu";
 import MenuMobile from "@components/MenuMobile";
+
+import MyOrder from "@containers/MyOrder";
 
 import iconMenu from "@icons/icon_menu.svg";
 import shoppingCart from "@icons/icon_shopping_cart.svg";
 import logo from "@logos/logo_yard_sale.svg";
 
-import "@styles/Header.scss";
+//import "@styles/Header.scss";
+import styles from "@styles/Header.module.scss";
 
 const Header = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
   const [toggleMenuMobile, setToggleMenuMobile] = useState(false);
-  /* Previamente usabamos toggleOrder solo para cerrar y abrir el panel de ordenes
-  desde el carrito de compra, ahora lo podemos hacer tambien desde la flecha
-  dentro del mismo menu */
-  //const [toggleOrders, setToggleOrders] = useState(false);
   const { state, setToggleOrders } = useContext(AppContext);
-
-  /* window.addEventListener("scroll", () => {
-    setToggle(false);
-    setToggleOrders(false);
-  }); */
 
   const handleToggleMenuMobile = () => {
     setToggleMenuMobile(!toggleMenuMobile);
   }
 
   const handleToggleMenu = () => {
-    // setToggleOrders(false);
     setToggleMenu(!toggleMenu);
     setToggleOrders(false);
   };
@@ -42,7 +35,7 @@ const Header = () => {
   };
 
   return (
-    <nav>
+    <nav className={styles.Nav}>
       <img src={iconMenu} alt="menu" className="menu" onClick={handleToggleMenuMobile}/>
       <div className="navbar-left">
         <img src={logo} alt="logo" className="nav-logo" />

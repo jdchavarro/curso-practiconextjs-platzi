@@ -1,6 +1,6 @@
 module.exports = {
   reactStrictMode: true,
-  swcMinify: true,
+/*   swcMinify: true,
   env: {
     customKey: 'customValue',
   },
@@ -14,5 +14,5 @@ module.exports = {
         permanent: true,
       }
     ]
-  }
+  } */
 }

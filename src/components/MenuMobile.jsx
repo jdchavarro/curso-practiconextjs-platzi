@@ -1,9 +1,10 @@
 import React from "react";
-import '@styles/MenuMobile.scss'
+
+import styles from '@styles/MenuMobile.module.scss'
 
 const MenuMobile = () => {
   return (
-    <div className="mobile-menu">
+    <div className={styles.mobile-menu}>
       <ul>
         <li>
           <a href="/">CATEGORIES</a>
