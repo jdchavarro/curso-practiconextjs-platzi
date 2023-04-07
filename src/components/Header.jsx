@@ -36,9 +36,9 @@ const Header = () => {
 
   return (
     <nav className={styles.Nav}>
-      <img src={iconMenu} alt="menu" className="menu" onClick={handleToggleMenuMobile}/>
-      <div className="navbar-left">
-        <img src={logo} alt="logo" className="nav-logo" />
+      <img src={iconMenu} alt="menu" className={styles.menu} onClick={handleToggleMenuMobile}/>
+      <div className={styles["navbar-left"]}>
+        <img src={logo} alt="logo" className={styles["nav-logo"]} />
         <ul>
           <li>
             <a href="/">All</a>
@@ -60,12 +60,12 @@ const Header = () => {
           </li>
         </ul>
       </div>
-      <div className="navbar-right">
+      <div className={styles["navbar-right"]}>
         <ul>
-          <li className="navbar-email" onClick={handleToggleMenu}>
+          <li className={styles["navbar-email"]} onClick={handleToggleMenu}>
             platzi@example.com
           </li>
-          <li className="navbar-shopping-cart" onClick={handleToggleOrders}>
+          <li className={styles["navbar-shopping-cart"]} onClick={handleToggleOrders}>
             <img src={shoppingCart} alt="shopping cart" />
             {state.cart.length > 0 ? <div>{state.cart.length}</div> : null}
           </li>

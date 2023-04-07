@@ -19,23 +19,23 @@ const MyOrder = () => {
 
 	return (
 		<aside className={styles.MyOrder}>
-			<div className="title-container">
+			<div className={styles["title-container"]}>
 				<img src={flechita} alt="arrow" onClick={() => setToggleOrders(false)}/>
-				<p className="title">My order</p>
+				<p className={styles.title}>My order</p>
 			</div>
-			<div className="my-order-content">
-				<div className="my-order-content__order-item-list">
+			<div className={styles["my-order-content"]}>
+				<div className={styles["my-order-content__order-item-list"]}>
 					{state.cart.map(product => (
 						<OrderItem product={product} key={`orderItem-${product.id}`} />
 					))}
 				</div>
-				<div className="order">
+				<div className={styles.order}>
 					<p>
 						<span>Total</span>
 					</p>
 					<p>${sumTotal()}</p>
 				</div>
-				<button className="primary-button">
+				<button className={styles["primary-button"]}>
 					Checkout
 				</button>
 			</div>
