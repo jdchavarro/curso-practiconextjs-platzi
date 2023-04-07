@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import Image from "next/image";
 
 import AppContext from '@context/AppContext';
 
@@ -20,7 +21,7 @@ const MyOrder = () => {
 	return (
 		<aside className={styles.MyOrder}>
 			<div className={styles["title-container"]}>
-				<img src={flechita} alt="arrow" onClick={() => setToggleOrders(false)}/>
+				<Image src={flechita} alt="arrow" onClick={() => setToggleOrders(false)}/>
 				<p className={styles.title}>My order</p>
 			</div>
 			<div className={styles["my-order-content"]}>
