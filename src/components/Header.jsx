@@ -1,5 +1,6 @@
 import React, { useState, useContext } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 import AppContext from "@context/AppContext";
 
@@ -39,7 +40,9 @@ const Header = () => {
     <nav className={styles.Nav}>
       <Image src={iconMenu} alt="menu" className={styles.menu} onClick={handleToggleMenuMobile}/>
       <div className={styles["navbar-left"]}>
+        <Link href='/'>
         <Image src={logo} alt="logo" className={styles["nav-logo"]} />
+        </Link>
         <ul>
           <li>
             <a href="/">All</a>

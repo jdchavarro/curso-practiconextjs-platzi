@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import Image from "next/image";
+import Link from 'next/link';
 
 import AppContext from '@context/AppContext';
 
@@ -36,9 +37,9 @@ const MyOrder = () => {
 					</p>
 					<p>${sumTotal()}</p>
 				</div>
-				<button className={styles["primary-button"]}>
+				<Link className={styles["primary-button"]} href='/checkout'>
 					Checkout
-				</button>
+				</Link>
 			</div>
 		</aside>
 	);
