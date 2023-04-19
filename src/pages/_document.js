@@ -5,6 +5,7 @@ export default function Document() {
     <Html lang="en">
       <Head />
       <title>React Shop</title>
+      <link rel='manifest' href='/manifest.json' />
       <body>
         <Main />
         <NextScript />

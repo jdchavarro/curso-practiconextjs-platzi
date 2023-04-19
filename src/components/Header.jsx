@@ -38,7 +38,7 @@ const Header = () => {
 
   return (
     <nav className={styles.Nav}>
-      <Image src={iconMenu} alt="menu" className={styles.menu} onClick={handleToggleMenuMobile}/>
+      <img src={iconMenu.src} alt="menu" className={styles.menu} onClick={handleToggleMenuMobile} onKeyDown={handleToggleMenuMobile} role="presentation"/>
       <div className={styles["navbar-left"]}>
         <Link href='/' passHref>
         <Image src={logo} alt="logo" className={styles["nav-logo"]} />
