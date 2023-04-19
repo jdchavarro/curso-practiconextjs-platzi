@@ -12,7 +12,7 @@ const OrderItem = ({product}) => {
 
 	const handleRemove = item => {
 		removeFromCart(item);
-	}
+	};
 
 	return (
 		<div className={styles.OrderItem}>
@@ -24,6 +24,6 @@ const OrderItem = ({product}) => {
 			<Image src={close} alt="close" onClick={() => handleRemove(product)} />
 		</div>
 	);
-}
+};
 
 export default OrderItem;

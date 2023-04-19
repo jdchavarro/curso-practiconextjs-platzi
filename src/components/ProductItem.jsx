@@ -1,8 +1,8 @@
 import React, { useContext, useState } from 'react';
 import Image from 'next/image';
 
-import AppContext from '@context/AppContext'
-import addToCartImage from '@icons/bt_add_to_cart.svg'
+import AppContext from '@context/AppContext';
+import addToCartImage from '@icons/bt_add_to_cart.svg';
 import addedToCartImage from '@icons/bt_added_to_cart.svg';
 
 import styles from '@styles/ProductItem.module.scss';
@@ -15,13 +15,13 @@ const ProductItem = ({product}) => {
 	
 	const handleClick = item => {
 		if(productInCart(item, item.id)) {
-			removeFromCart(item)
-			setCartImage(addToCartImage)
+			removeFromCart(item);
+			setCartImage(addToCartImage);
 		} else {
 			addToCart(item);
-			setCartImage(addedToCartImage)
+			setCartImage(addedToCartImage);
 		}
-	}
+	};
 
 	return (
 		<div className={styles.ProductItem}>
@@ -32,12 +32,12 @@ const ProductItem = ({product}) => {
 					<p>${product.price}</p>
 					<p>{product.title}</p>
 				</div>
-				<figure onClick={() => handleClick(product)}>
+				<figure onClick={() => handleClick(product)} role='presentation' onKeyDown={() => handleClick(product)} >
 					<Image src={cartImage} alt="add to cart" />
 				</figure>
 			</div>
 		</div>
 	);
-}
+};
 
 export default ProductItem;

@@ -1,11 +1,12 @@
 import React from 'react';
+import Image from 'next/image';
 import '@styles/PasswordRecovery.scss';
 
 const PasswordRecovery = () => {
 	return (
 		<div className="PasswordRecovery">
 			<div className="PasswordRecovery-container">
-				<img src="./logos/logo_yard_sale.svg" alt="logo" className="logo" />
+				<Image src="./logos/logo_yard_sale.svg" alt="logo" className="logo" />
 				<h1 className="title">Password recovery</h1>
 				<p className="subtitle">Inform the email address used to create your account</p>
 				<form action="/" className="form">
@@ -16,6 +17,6 @@ const PasswordRecovery = () => {
 			</div>
 		</div>
 	);
-}
+};
 
 export default PasswordRecovery;
